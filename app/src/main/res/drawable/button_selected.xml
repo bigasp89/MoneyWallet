@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:background="#CDDC39" android:state_enabled="false"/>
+        <item android:background="#FF5722" android:state_enabled="true"/>
+        <!-- default state-->
+        <item android:background="#FF5722" />
+    </selector>
+</selector>

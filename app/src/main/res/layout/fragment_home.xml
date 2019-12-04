@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_mese_corrente"
+        android:layout_width="113dp"
+        android:layout_height="26dp"
+        android:text="Dicembre"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <TextView
+        android:id="@+id/tv_entrate"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Entrate"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_mese_corrente"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mese_corrente" />
+
+    <TextView
+        android:id="@+id/tv_uscite"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Uscite"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_mese_corrente"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mese_corrente" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/PieChart"
+        android:layout_width="128dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mese_corrente"
+        app:layout_constraintVertical_bias="0.015"></com.github.mikephil.charting.charts.PieChart>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
