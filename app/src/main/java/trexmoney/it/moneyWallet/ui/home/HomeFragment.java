@@ -46,11 +46,10 @@ public class HomeFragment extends Fragment {
 
         pieChart= root.findViewById(R.id.PieChart);
         pieChart.setRotationEnabled(true);
-        pieChart.setHoleRadius(60f);
-        pieChart.setCenterTextSize(18);
+        pieChart.setHoleRadius(70f);
+        pieChart.setCenterTextSize(16);
         pieChart.setCenterTextTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-        pieChart.setCenterTextColor(Color.BLACK);
-        pieChart.setCenterText("Saldo: 20 €");
+        pieChart.setCenterText("-600 €");
         pieChart.setTransparentCircleAlpha(0);
         pieChart.setDrawEntryLabels(false);
         pieChart.getLegend().setEnabled(false);
