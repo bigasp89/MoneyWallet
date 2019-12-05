@@ -2,8 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home"
+        app:showAsAction="ifRoom"/>/>
+    <item
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:title="Uscite"
+        app:showAsAction="ifRoom"/>
+        />
+    <item
+        android:id="@+id/nav_slideshow"
+        android:icon="@drawable/ic_attach_money_green_24dp"
+        android:title="Entrate"
+        app:showAsAction="ifRoom"/>
+        />
+    <item
+        android:id="@+id/nav_send"
+        android:icon="@drawable/ic_equalizer_black_24dp"
+        android:title="Bilancio"
+        app:showAsAction="ifRoom"/>
+        />
+
 </menu>

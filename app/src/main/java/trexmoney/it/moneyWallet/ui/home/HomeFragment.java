@@ -14,10 +14,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
@@ -29,6 +34,7 @@ public class HomeFragment extends Fragment {
     private float[] yData = {80f,20f};
     private String[] xData = {"Uscite","Entrate"};
     PieChart pieChart;
+    BarChart barChart;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,11 +55,42 @@ public class HomeFragment extends Fragment {
         pieChart.setHoleRadius(70f);
         pieChart.setCenterTextSize(16);
         pieChart.setCenterTextTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-        pieChart.setCenterText("-600 €");
+        pieChart.setCenterText("-60 €");
         pieChart.setTransparentCircleAlpha(0);
         pieChart.setDrawEntryLabels(false);
         pieChart.getLegend().setEnabled(false);
+        pieChart.animateXY(1000, 1000);
         addDataSetPie();
+
+        barChart = root.findViewById(R.id.barchart);
+
+        ArrayList NoOfEmp = new ArrayList();
+
+        NoOfEmp.add(new BarEntry(945f, 0));
+        NoOfEmp.add(new BarEntry(1040f, 1));
+        NoOfEmp.add(new BarEntry(1133f, 2));
+        NoOfEmp.add(new BarEntry(1240f, 3));
+        NoOfEmp.add(new BarEntry(1369f, 4));
+        NoOfEmp.add(new BarEntry(1487f, 5));
+
+
+        ArrayList year = new ArrayList();
+
+        year.add("2008");
+        year.add("2009");
+        year.add("2010");
+        year.add("2011");
+        year.add("2012");
+        year.add("2013");
+
+
+        BarDataSet bardataset = new BarDataSet(NoOfEmp, "No Of Employee");
+        barChart.animateY(5000);
+        BarData data = new BarData(bardataset);
+        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        barChart.setData(data);
+        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+
         return root;
     }
     private void addDataSetPie(){
